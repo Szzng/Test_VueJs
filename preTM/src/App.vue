@@ -21,3 +21,12 @@ export default {
   }),
 };
 </script>
+
+<style>
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+</style>
