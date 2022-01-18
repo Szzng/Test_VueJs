@@ -67,9 +67,9 @@
     </v-app-bar>
 
     <!-- login dialog -->
-    <v-dialog v-model="dialog.login" max-width="553" max-height="600">
-      <v-card class="pa-8" color="#FFFFFF">
-        <v-toolbar cards flat>
+    <v-dialog v-model="dialog.login" width="553" height="600">
+      <v-card class="pa-6" color="#FFFFFF">
+        <v-toolbar cards flat class="my-6">
           <v-img
             alt="Teameat Logo"
             class="shrink mx-auto"
@@ -79,13 +79,7 @@
           />
         </v-toolbar>
 
-        <v-form id="login-form" ref="loginForm" class="pa-4 pt-6">
-          <v-text-field
-            name="username"
-            label="username"
-            outlined
-            color="primary"
-          ></v-text-field>
+        <v-form id="login-form" ref="loginForm" class="pa-3 pt-6">
           <v-text-field
             name="email"
             label="이메일"

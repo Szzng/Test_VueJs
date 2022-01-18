@@ -3,7 +3,6 @@
   <v-main>
     <!-- 전체 컨테이너 -->
     <v-container class="#E5E5E5">
-
       <!-- 윈도우 -->
       <v-container>
         <v-row>
@@ -138,12 +137,10 @@
               </v-list>
             </v-card>
           </v-col>
-
           <v-col cols="6">
             <v-card height="210" dense outlined rounded>
               <v-card-title class="pa-3">
-                <v-icon>mdi-controller-classic</v-icon> &nbsp;&nbsp;헬스 ·
-                다이어트
+                <v-icon>mdi-cash-plus</v-icon> &nbsp;&nbsp;주식 · 투자
               </v-card-title>
               <v-divider class="mx-5"></v-divider>
               <v-list>
@@ -185,7 +182,7 @@
           <v-col cols="6">
             <v-card height="210" dense outlined rounded>
               <v-card-title class="pa-3">
-                <v-icon>mdi-weight-lifter</v-icon> &nbsp;&nbsp;헬스 · 다이어트
+                <v-icon>mdi-controller-classic</v-icon> &nbsp;&nbsp;여가 · 문화생활
               </v-card-title>
               <v-divider class="mx-5"></v-divider>
               <v-list>
@@ -223,8 +220,7 @@
           <v-col cols="6">
             <v-card height="210" dense outlined rounded>
               <v-card-title class="pa-3">
-                <v-icon>mdi-controller-classic</v-icon> &nbsp;&nbsp;헬스 ·
-                다이어트
+                <v-icon>mdi-coffee</v-icon> &nbsp;&nbsp;맛집 · 여행
               </v-card-title>
               <v-divider class="mx-5"></v-divider>
               <v-list>
@@ -260,7 +256,6 @@
           </v-col>
         </v-row>
       </v-container>
-
     </v-container>
   </v-main>
 </template>
