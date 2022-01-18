@@ -65,7 +65,7 @@
                             </v-list-item-content>
                           </v-col>
 
-                          <v-col cols="2" class="pa-0">
+                          <v-col cols="3" class="pa-0 text-right">
                             <v-list-item-action>
                               <v-list-item-action-text>
                                 <v-icon dense color="#A6A6A6">mdi-fire</v-icon
@@ -77,7 +77,7 @@
                               </v-list-item-action-text>
                             </v-list-item-action>
                           </v-col>
-                          <v-col cols="4" class="pa-0 text-right">
+                          <v-col cols="3" class="pa-0 text-right">
                             <v-list-item-action>
                               <v-list-item-action-text>
                                 {{ post.owner }}

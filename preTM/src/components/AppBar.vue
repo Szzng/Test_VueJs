@@ -10,10 +10,12 @@
           width="100"
       /></a>
 
-      <v-spacer></v-spacer>
-
-      <v-btn text href="/topic">토픽</v-btn>
-      <v-btn text href="/pitapat">두근두근</v-btn>
+      <v-tabs centered class="pl-n12" color="primary">
+        <v-tabs-slider></v-tabs-slider>
+        <v-tab class="black--text" to="/">Home</v-tab>
+        <v-tab class="black--text" to="/topic">토픽</v-tab>
+        <v-tab class="black--text" to="/pitapat">두근두근</v-tab>
+      </v-tabs>
 
       <v-spacer></v-spacer>
 
@@ -124,6 +126,7 @@ axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 export default {
   data: () => ({
+    tab: null,
     dialog: {
       login: false,
     },
@@ -191,7 +194,7 @@ export default {
   border-width: 1px;
 }
 
-.v-app-bar .v-btn,
+.v-tab,
 .v-dialog .v-btn {
   font-weight: bold;
   font-size: 1em;
