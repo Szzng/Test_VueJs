@@ -97,130 +97,14 @@
           </v-col>
         </v-row>
       </v-container>
-      <!-- 작은 카드 * 2 -->
+
+      <!-- 작은 카드 -->
       <v-container>
         <v-row>
-          <v-col cols="6">
+          <v-col  v-for="category in categories" :key="category.name" cols="6">
             <v-card height="210" dense outlined rounded>
               <v-card-title class="pa-3">
-                <v-icon>mdi-weight-lifter</v-icon> &nbsp;&nbsp;헬스 · 다이어트
-              </v-card-title>
-              <v-divider class="mx-5"></v-divider>
-              <v-list>
-                <v-list-item-group active-class="primary--text">
-                  <template v-for="(post, index) in posts">
-                    <v-list-item :key="index" dense>
-                      <template>
-                        <v-row no-gutters dense align="center">
-                          <v-list-item-content class="ml-3">
-                            <v-list-item-title>{{
-                              post.title
-                            }}</v-list-item-title>
-                          </v-list-item-content>
-                          <v-list-item-action>
-                            <v-list-item-action-text>
-                              <v-icon dense color="#A6A6A6">mdi-fire</v-icon>32
-                              &nbsp;
-                              <v-icon dense color="#A6A6A6"
-                                >mdi-message-processing-outline</v-icon
-                              >
-                              35
-                            </v-list-item-action-text>
-                          </v-list-item-action>
-                        </v-row>
-                      </template>
-                    </v-list-item>
-
-                    <!-- <v-divider v-if="index < posts.length - 1" :key="index" class="mx-8"></v-divider> -->
-                  </template>
-                </v-list-item-group>
-              </v-list>
-            </v-card>
-          </v-col>
-          <v-col cols="6">
-            <v-card height="210" dense outlined rounded>
-              <v-card-title class="pa-3">
-                <v-icon>mdi-cash-plus</v-icon> &nbsp;&nbsp;주식 · 투자
-              </v-card-title>
-              <v-divider class="mx-5"></v-divider>
-              <v-list>
-                <v-list-item-group active-class="primary--text">
-                  <template v-for="(post, index) in posts">
-                    <v-list-item :key="index" dense>
-                      <template>
-                        <v-row no-gutters dense align="center">
-                          <v-list-item-content class="ml-3">
-                            <v-list-item-title>{{
-                              post.title
-                            }}</v-list-item-title>
-                          </v-list-item-content>
-                          <v-list-item-action>
-                            <v-list-item-action-text>
-                              <v-icon dense color="#A6A6A6">mdi-fire</v-icon>32
-                              &nbsp;
-                              <v-icon dense color="#A6A6A6"
-                                >mdi-message-processing-outline</v-icon
-                              >
-                              35
-                            </v-list-item-action-text>
-                          </v-list-item-action>
-                        </v-row>
-                      </template>
-                    </v-list-item>
-
-                    <!-- <v-divider v-if="index < posts.length - 1" :key="index" class="mx-8"></v-divider> -->
-                  </template>
-                </v-list-item-group>
-              </v-list>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-      <!-- 작은 카드 * 2 -->
-      <v-container>
-        <v-row>
-          <v-col cols="6">
-            <v-card height="210" dense outlined rounded>
-              <v-card-title class="pa-3">
-                <v-icon>mdi-controller-classic</v-icon> &nbsp;&nbsp;여가 · 문화생활
-              </v-card-title>
-              <v-divider class="mx-5"></v-divider>
-              <v-list>
-                <v-list-item-group active-class="primary--text">
-                  <template v-for="(post, index) in posts">
-                    <v-list-item :key="index" dense>
-                      <template>
-                        <v-row no-gutters dense align="center">
-                          <v-list-item-content class="ml-3">
-                            <v-list-item-title>{{
-                              post.title
-                            }}</v-list-item-title>
-                          </v-list-item-content>
-                          <v-list-item-action>
-                            <v-list-item-action-text>
-                              <v-icon dense color="#A6A6A6">mdi-fire</v-icon>32
-                              &nbsp;
-                              <v-icon dense color="#A6A6A6"
-                                >mdi-message-processing-outline</v-icon
-                              >
-                              35
-                            </v-list-item-action-text>
-                          </v-list-item-action>
-                        </v-row>
-                      </template>
-                    </v-list-item>
-
-                    <!-- <v-divider v-if="index < posts.length - 1" :key="index" class="mx-8"></v-divider> -->
-                  </template>
-                </v-list-item-group>
-              </v-list>
-            </v-card>
-          </v-col>
-
-          <v-col cols="6">
-            <v-card height="210" dense outlined rounded>
-              <v-card-title class="pa-3">
-                <v-icon>mdi-coffee</v-icon> &nbsp;&nbsp;맛집 · 여행
+                <v-icon >{{category.icon}}</v-icon> &nbsp;&nbsp;{{category.name}}
               </v-card-title>
               <v-divider class="mx-5"></v-divider>
               <v-list>
@@ -263,6 +147,12 @@
 <script>
 export default {
   data: () => ({
+    categories: [
+      { name: "헬스 · 다이어트", icon: "mdi-fire" },
+      { name: "주식 · 투자", icon: "mdi-cash-plus" },
+      { name: "썸 · 연애", icon: "mdi-puzzle-heart" },
+      { name: "맛집 · 여행", icon: "mdi-coffee-outline" },
+    ],
     posts: [
       {
         title: "개발보다 설레는 대상을 찾았어요...",

@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-app-bar app color="#FFFFFF">
+      <!-- teameat logo img -->
       <a href="/">
         <v-img
           alt="Teameat Logo"
@@ -10,6 +11,7 @@
           width="100"
       /></a>
 
+      <!-- home, 토픽, 두근두근 탭 -->
       <v-tabs centered class="pl-n12" color="primary">
         <v-tabs-slider></v-tabs-slider>
         <v-tab class="black--text" to="/">Home</v-tab>
@@ -19,6 +21,7 @@
 
       <v-spacer></v-spacer>
 
+      <!-- 검색창 -->
       <v-responsive max-width="240">
         <v-text-field
           class="search-box"
@@ -33,9 +36,12 @@
         </v-text-field>
       </v-responsive>
 
+      <!-- 알림 버튼 -->
       <v-btn icon>
         <v-icon color="black">mdi-bell</v-icon>
       </v-btn>
+
+      <!-- 계정 버튼 -->
       <v-menu offset-y left bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn text v-bind="attrs" v-on="on">
@@ -60,8 +66,8 @@
                 >로그아웃</v-list-item-title
               ></v-list-item
             >
-            <v-list-item
-              ><v-list-item-title>My Page</v-list-item-title></v-list-item
+            <v-list-item>
+              <v-list-item-title>My Page</v-list-item-title></v-list-item
             >
           </template>
         </v-list>
