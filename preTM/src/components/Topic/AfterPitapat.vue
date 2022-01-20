@@ -1,49 +1,48 @@
 <template>
   <v-container class="#E5E5E5">
-
     <!-- posts -->
     <v-container>
-    <v-row>
-      <v-col v-for="post in PaginatedPosts" :key="post.id" cols="6" >
-        <v-card dense elevation="0" href="#" height="186">
-          <v-card-title class="font-weight-bold">{{post.title.substr(0, 25)}}</v-card-title>
-          <v-card elevation="0" height="85">
-          <v-card-text class="black--text" v-text="post.content.substr(0, 100)"></v-card-text>
+      <v-row>
+        <v-col v-for="post in PaginatedPosts" :key="post.id" cols="6">
+          <v-card outlined dense elevation="0" href="postdetail" height="186">
+            <v-card-title class="font-weight-bold">{{
+              post.title.substr(0, 25)
+            }}</v-card-title>
+            <v-card elevation="0" height="85">
+              <v-card-text
+                class="black--text"
+                v-text="post.content.substr(0, 100)"
+              ></v-card-text>
+            </v-card>
+            <v-card-actions class="ml-2">
+              <div style="color: #a6a6a6; font-size: 12px;">
+                <v-icon dense color="#A6A6A6"> mdi-eye </v-icon>
+                &nbsp;{{ post.hit }}&nbsp;
+                <v-icon dense color="#A6A6A6">mdi-fire</v-icon>
+                {{ post.like }}&nbsp;&nbsp;
+                <v-icon dense color="#A6A6A6">
+                  mdi-message-processing-outline
+                </v-icon>
+                &nbsp;{{ post.comment }}&nbsp;
+              </div>
+            </v-card-actions>
           </v-card>
-          <v-card-actions class="ml-2">
-            <v-icon dense color="#A6A6A6"> mdi-eye </v-icon>
-            <span style="color: #a6a6a6; font-size: 12px"
-              >&nbsp;{{ post.hit }}&nbsp;</span
-            >
-            <v-icon dense color="#A6A6A6">mdi-fire</v-icon>
-            <span style="color: #a6a6a6; font-size: 12px"
-              >&nbsp;{{ post.like }}&nbsp;</span
-            >
-            <v-icon dense color="#A6A6A6"
-              >mdi-message-processing-outline</v-icon
-            >
-            <span style="color: #a6a6a6; font-size: 12px"
-              >&nbsp;{{ post.comment }}&nbsp;</span
-            >
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
     </v-container>
 
     <!-- pagination -->
     <v-container>
-    <v-row align="bottom" justify="center">
-      <v-pagination
-        v-model="pagination.curpageNum"
-        :length="TotalPages"
-        color="secondary"
-        prev-icon="mdi-chevron-left"
-        next-icon="mdi-chevron-right"
-      ></v-pagination>
-    </v-row>
+      <v-row align="bottom" justify="center">
+        <v-pagination
+          v-model="pagination.curpageNum"
+          :length="TotalPages"
+          color="secondary"
+          prev-icon="mdi-chevron-left"
+          next-icon="mdi-chevron-right"
+        ></v-pagination>
+      </v-row>
     </v-container>
-
   </v-container>
 </template>
 
@@ -59,7 +58,7 @@ export default {
     posts: [
       {
         title: "개발보다 설레는 대상을 찾았어요...",
-        content:"@@@@@@@@@@@@@@@@",
+        content: "@@@@@@@@@@@@@@@@",
         owner: "행복한쌈코비빔밥dddddddd",
         updated_at: "2022.1.17",
         hit: 900,
@@ -175,8 +174,7 @@ export default {
 </script>
 
 <style scoped>
-.v-card-title {
-  font-size: 200pt;
+a:hover {
+  color: #d4525d;
 }
- a:hover { color: #D4525D;}
 </style>
