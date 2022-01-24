@@ -82,7 +82,6 @@
               Years
             </v-chip>
           </v-card>
-
           <!-- image -->
           <v-card class="mt-3" outlined>
             image
