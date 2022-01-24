@@ -1,8 +1,15 @@
 <template>
   <v-app id="inspire">
     <AppBar />
-    
-      <router-view></router-view>
+
+    <v-container>
+      <v-row>
+        <v-col class="col-12 col-md-10" offset-md="1">
+          <router-view></router-view>
+        </v-col>
+      </v-row>
+    </v-container>
+
   </v-app>
 </template>
 
