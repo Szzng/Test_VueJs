@@ -126,41 +126,41 @@
 </template>
 
 <script>
-import axios from "axios";
-axios.defaults.xsrfCookieName = "csrftoken";
-axios.defaults.xsrfHeaderName = "X-CSRFToken";
+import axios from 'axios'
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 export default {
   data: () => ({
     tab: null,
     dialog: {
-      login: false,
+      login: false
     },
     me: {
-      username: "guest",
-    },
+      username: 'guest'
+    }
   }),
 
   methods: {
-    dialogOpen(kind) {
-      console.log("dialogOpen()...", kind);
-      if (kind === "login") {
-        this.dialog.login = true;
+    dialogOpen (kind) {
+      console.log('dialogOpen()...', kind)
+      if (kind === 'login') {
+        this.dialog.login = true
       }
     },
 
-    save(kind) {
-      console.log("save()...", kind);
-      if (kind === "login") {
-        this.login();
-        this.dialog.login = false;
-        this.$refs.loginForm.reset();
+    save (kind) {
+      console.log('save()...', kind)
+      if (kind === 'login') {
+        this.login()
+        this.dialog.login = false
+        this.$refs.loginForm.reset()
       }
     },
 
-    login() {
-      console.log("login()...");
-      this.me = { username: "sz" };
+    login () {
+      console.log('login()...')
+      this.me = { username: 'sz' }
 
       // const postData = new FormData(document.getElementById("login-form"));
       // axios
@@ -175,9 +175,9 @@ export default {
       //   });
     },
 
-    logout() {
-      console.log("logout()...");
-      this.me = { username: "guest" };
+    logout () {
+      console.log('logout()...')
+      this.me = { username: 'guest' }
       // axios
       //   .get("/accounts/logout/")
       //   .then((res) => {
@@ -189,9 +189,9 @@ export default {
       //     console.log("Logout GET err.response", err.response);
       //     alert("logout NOK");
       //   });
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>

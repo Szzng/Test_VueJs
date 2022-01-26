@@ -14,19 +14,19 @@
 </template>
 
 <script>
-import AppBar from "./components/AppBar";
+import AppBar from './components/AppBar'
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
-    AppBar,
+    AppBar
   },
 
   data: () => ({
-    
-  }),
-};
+
+  })
+}
 </script>
 
 <style>
@@ -34,6 +34,5 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
-
 
 </style>

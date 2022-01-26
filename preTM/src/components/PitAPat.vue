@@ -22,7 +22,7 @@
 
     <!-- 셀프소개팅 -->
     <v-row align="start" justify="start">
-        <v-col cols="4" v-for="post in posts" :key="post.id"> 
+        <v-col cols="4" v-for="post in posts" :key="post.id">
           <v-card height="200">
             <v-card-text class="pb-0">{{post.region}} | {{post.gender}} | {{post.age}}</v-card-text>
             <v-card-title class="py-1">{{post.title.substr(0,15)}}</v-card-title>
@@ -54,39 +54,39 @@ export default {
   data: () => ({
     posts: [
       {
-        region: "서울",
-        gender: "남",
-        age: "33",
-        title: "개발보다 설레는 대상을 찾았어요...",
-        content: "~~",
-        hit: "100",
-        like: "100",
-        comment: "100",
-        updated_at: "2022.1.17",
+        region: '서울',
+        gender: '남',
+        age: '33',
+        title: '개발보다 설레는 대상을 찾았어요...',
+        content: '~~',
+        hit: '100',
+        like: '100',
+        comment: '100',
+        updated_at: '2022.1.17'
       },
       {
-        region: "전주",
-        gender: "남",
-        age: "29",
-        title: "전주 비빔밥 좋아하시는 분?",
-        content: "~~",
-        hit: "100",
-        like: "100",
-        comment: "100",
-        updated_at: "2022.1.17",
+        region: '전주',
+        gender: '남',
+        age: '29',
+        title: '전주 비빔밥 좋아하시는 분?',
+        content: '~~',
+        hit: '100',
+        like: '100',
+        comment: '100',
+        updated_at: '2022.1.17'
       },
       {
-        region: "서울",
-        gender: "남",
-        age: "31",
-        title: "따뜻한 남자 좋아하시는 분?",
-        content: "키 178에 몸무게 70정도 나가는 보통 체형입니다. 웃는 게 예쁜 분이 이상형이에요. 편하게 답글 남겨주세요!",
-        hit: "100",
-        like: "100",
-        comment: "100",
-        updated_at: "10초 전",
-      },
-    ],
-  }),
-};
+        region: '서울',
+        gender: '남',
+        age: '31',
+        title: '따뜻한 남자 좋아하시는 분?',
+        content: '키 178에 몸무게 70정도 나가는 보통 체형입니다. 웃는 게 예쁜 분이 이상형이에요. 편하게 답글 남겨주세요!',
+        hit: '100',
+        like: '100',
+        comment: '100',
+        updated_at: '10초 전'
+      }
+    ]
+  })
+}
 </script>

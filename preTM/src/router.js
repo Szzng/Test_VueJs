@@ -10,28 +10,28 @@ import Travel from './components/Topic/Travel.vue'
 import PitAPat from './components/PitAPat.vue'
 import PostDetail from './components/PostDetail.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const router = new VueRouter({
-    mode: "history",
-    routes: [
-        { path: "/", component: Home },
-        { path: "/topic", component: Topic },
-        { path: "/pitapat", component: PitAPat },
-        { path: "/topic/postdetail", component: PostDetail },
-        {
-            path: "/topic",
-            component: Topic,
-            props: true,
-            children: [
-                {path: "afterpitapat", component: AfterPitapat},
-                {path: "health", component: Health},
-                {path: "invest", component: Invest},
-                {path: "ssum", component: Ssum},
-                {path: "travel", component: Travel},
-            ]
-        }
-    ]
+  mode: 'history',
+  routes: [
+    { path: '/', component: Home },
+    { path: '/topic', component: Topic },
+    { path: '/pitapat', component: PitAPat },
+    { path: '/topic/postdetail', component: PostDetail },
+    {
+      path: '/topic',
+      component: Topic,
+      props: true,
+      children: [
+        { path: 'afterpitapat', component: AfterPitapat },
+        { path: 'health', component: Health },
+        { path: 'invest', component: Invest },
+        { path: 'ssum', component: Ssum },
+        { path: 'travel', component: Travel }
+      ]
+    }
+  ]
 })
 
-export default router;
+export default router

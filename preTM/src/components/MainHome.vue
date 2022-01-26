@@ -1,4 +1,3 @@
-
 <template>
   <v-main>
     <!-- 전체 컨테이너 -->
@@ -148,37 +147,37 @@
 export default {
   data: () => ({
     categories: [
-      { name: "헬스 · 다이어트", icon: "mdi-fire" },
-      { name: "주식 · 투자", icon: "mdi-cash-plus" },
-      { name: "썸 · 연애", icon: "mdi-puzzle-heart" },
-      { name: "맛집 · 여행", icon: "mdi-coffee-outline" },
+      { name: '헬스 · 다이어트', icon: 'mdi-fire' },
+      { name: '주식 · 투자', icon: 'mdi-cash-plus' },
+      { name: '썸 · 연애', icon: 'mdi-puzzle-heart' },
+      { name: '맛집 · 여행', icon: 'mdi-coffee-outline' }
     ],
     posts: [
       {
-        title: "개발보다 설레는 대상을 찾았어요...",
-        content: "~~",
-        owner: "행복한쌈코비빔밥dddddddd",
-        updated_at: "2022.1.17",
+        title: '개발보다 설레는 대상을 찾았어요...',
+        content: '~~',
+        owner: '행복한쌈코비빔밥dddddddd',
+        updated_at: '2022.1.17'
       },
       {
-        title: "드디어 사랑이 찾아오는가, 준봇의 두근두근 썰썰썰",
-        content: "~~",
-        owner: "둑흔준보",
-        updated_at: "2022.1.17",
+        title: '드디어 사랑이 찾아오는가, 준봇의 두근두근 썰썰썰',
+        content: '~~',
+        owner: '둑흔준보',
+        updated_at: '2022.1.17'
       },
       {
-        title: "이제 나도 민간인! 기다려라 세상아.............................",
-        content: "~~",
-        owner: "자신있는라회택",
-        updated_at: "2022.1.17",
-      },
+        title: '이제 나도 민간인! 기다려라 세상아.............................',
+        content: '~~',
+        owner: '자신있는라회택',
+        updated_at: '2022.1.17'
+      }
     ],
     length: 3,
-    onboarding: 0,
+    onboarding: 0
   }),
 
-  methods: {},
-};
+  methods: {}
+}
 </script>
 
 <style scoped></style>;

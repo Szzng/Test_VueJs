@@ -29,20 +29,20 @@
 
 <script>
 export default {
-  name: "Topic",
+  name: 'Topic',
 
   data: () => ({
     categories: [
-      { name: "두근두근 후기", route: "afterpitapat" },
-      { name: "헬스 · 다이어트", route: "health" },
-      { name: "주식 · 투자", route: "invest" },
-      { name: "썸 · 연애", route: "ssum" },
-      { name: "맛집 · 여행", route: "travel" },
+      { name: '두근두근 후기', route: 'afterpitapat' },
+      { name: '헬스 · 다이어트', route: 'health' },
+      { name: '주식 · 투자', route: 'invest' },
+      { name: '썸 · 연애', route: 'ssum' },
+      { name: '맛집 · 여행', route: 'travel' }
     ],
     length: 3,
-    onboarding: 0,
+    onboarding: 0
   }),
 
-  methods: {},
-};
+  methods: {}
+}
 </script>
